@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Codeforces Problem Extractor",
+  "version": "1.0",
+  "description": "Extract problem statements from Codeforces.",
+  "permissions": ["scripting", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://codeforces.com/problemset/problem/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
